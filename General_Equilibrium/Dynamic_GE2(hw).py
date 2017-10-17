@@ -1,21 +1,15 @@
-# TWO PERIOD GENERAL EQUILIBRIUM MODEL 
-# WITH TWO TYPES OF AGENTS IN TERMS OF
-# ENDOWMENTS AND PREFERENCES (DISCOUNT RATE)
 import numpy as np
 import matplotlib.pyplot as plt
 
-
 # KEY PARAMETERS
-
 # PREFERENCE PARAMETERS
     
 alpha = np.arange(0.4,0.6,0.1) # share of agents
 pi1 = np.arange(0.1,1.0,0.1) # prob1
 pi2 = ((1-pi1)/pi1) #prob2
 
-
 # ENDOWMENTS
-# NOTATION 12 - denotes agent 1 period 2 (see consumption function below)
+# NOTATION 12 - denotes agent 1 period 2
 
 Q11 = np.arange(1.0,2.0,0.05)
 Q12 = np.arange(1.0,2.0,0.05)
@@ -37,9 +31,7 @@ C12 = ((1/p)*((pi2x/pi1x))/(1+(pi2x/pi1x)))*(Q11x*p*Q12x)
 C21 = (1/(1+((pi2x/pi1x))))*(Q21x*p*Q22x)
 C22 = ((1/p)*((pi2x/pi1x)))/(1+(pi2x/pi1x))*(Q21x*p*Q22x)
 
-
-
-# PLOT 1: VARIATION OF ENDOWMENT of Agent Type 1 in period 1 ; added extra dim (,0)
+# PLOT 1: VARIATION OF ENDOWMENT of Agent Type 1 in period 1
 
 p_1 = p[:,0,0,0,0,0,0]
 C11_1 = C11[:,0,0,0,0,0,0]
@@ -52,6 +44,7 @@ ax1.plot(Q11, p_1,'k-',color='r',label='Price ratio (p2/p1)')
 ax1.legend(loc='best')
 ax1.set_xlabel('Endowment $Q_{1}^{1}$')
 ax1.set_ylabel('Price ratio (p1/p2)')
+#fig1.savefig('/Users/Alen/Desktop/fig1_r_Q11.png')
 
 fig2 = plt.figure(); ax1=fig2.add_subplot(1,1,1)
 ax1.plot(Q11,C11_1,'k-',color='r',label='$C_{1}^{1}$')
@@ -61,6 +54,7 @@ ax1.plot(Q11,C22_1,'k--',color='b',label='$C_{2}^{2}$')
 ax1.legend(loc='best')
 ax1.set_xlabel('Endowment $Q_{1}^{1}$')
 ax1.set_ylabel('Consumption ')
+#fig2.savefig('/Users/Alen/Desktop/fig2_Q11_C11.png')
 
 # PLOT 2: VARIATION OF ENDOWMENT of Agent Type 1 in period 2
 
@@ -75,6 +69,7 @@ ax1.plot(Q12,p_2,'k-',color='r',label='Price ratio (p2/p1)')
 ax1.legend(loc='best')
 ax1.set_xlabel('Endowment $Q_{1}^{2}$')
 ax1.set_ylabel('Price ratio (p2/p1)')
+#fig3.savefig('/Users/Alen/Desktop/fig3_Q12_p.png')
 
 fig4 = plt.figure(); ax1=fig4.add_subplot(1,1,1)
 ax1.plot(Q12,C11_2,'k-',color='r',label='$C_{1}^{1}$')
@@ -84,6 +79,7 @@ ax1.plot(Q12,C22_2,'k--',color='b',label='$C_{2}^{2}$')
 ax1.legend(loc='best')
 ax1.set_xlabel('Endowment $Q_{1}^{2}$')
 ax1.set_ylabel('Consumption ')
+#fig4.savefig('/Users/Alen/Desktop/fig3_Q12_C11.png')
 
 # PLOT 3: VARIATION OF PREFERENCE PARAMETER alpha for Agent Type 1 in period 2
 
@@ -98,6 +94,7 @@ ax1.plot(alpha,p_3,'k-',color='r',label='price ratio')
 ax1.legend(loc='best')
 ax1.set_xlabel("Alpha")
 ax1.set_ylabel("Price ratio (p2/p1)")
+#fig5.savefig('/Users/Alen/Desktop/fig5_alpha_p.png')
 
 fig6 = plt.figure(); ax1=fig6.add_subplot(1,1,1)
 ax1.plot(alpha,C11_3,'k-',color='r',label='$C_{1}^{1}$')
@@ -107,4 +104,4 @@ ax1.plot(alpha,C22_3,'k--',color='b',label='$C_{2}^{2}$')
 ax1.legend(loc='best')
 ax1.set_xlabel("Price ratio (p2/p1)")
 ax1.set_ylabel('Consumption ')
-
+#fig6.savefig('/Users/Alen/Desktop/fig6_alpha_C11.png')
