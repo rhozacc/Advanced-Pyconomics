@@ -9,46 +9,46 @@ import matplotlib.pyplot as plt
 
 # PREFERENCE PARAMETERS
     
-rho1 = np.arange(0.0,0.2,0.02) # discount rate 1 
-rho2 = np.arange(0.0,0.2,0.02) # discount rate 2
+alpha = np.arange(0.0,1.0,0.1) # discount rate 1 
+n = np.arange(0.4,0.6,0.05)
+d = np.arange(0.4,0.6,0.05)
+s = np.arange(1.0,2.0,0.1)
+
 
 # ENDOWMENTS
-# NOTATION 12 - denotes agent 1 period 2 (see consumption function below)
 
-Q11 = np.arange(1.0,2.0,0.05)
-Q12 = np.arange(1.0,2.0,0.05)
-Q21 = np.arange(1.0,2.0,0.05)
-Q22 = np.arange(1.0,2.0,0.05)
+K = np.arange(1.0,2.0,0.1)
+L = np.arange(1.0,2.0,0.1)
+
+
 
 # ix function for indexing shapes
 
-Q11x,Q12x,Q21x,Q22x,rho1x,rho2x = np.ix_(Q11,Q12,Q21,Q22,rho1,rho2)
+alphax,nx,dx,sx,Kx,Lx = np.ix_(alpha,n,d,s,K,L)
 
-# INTEREST RATE - SOLUTION TO GE
+#SOLUTION TO GE
 
-Q11x.shape, Q12x.shape, Q21x.shape, Q22x.shape, rho1x.shape, rho2x.shape
-r  = -1 + ((1+rho1x)/(2+rho1x)*Q12x+(1+rho2x)/(2+rho2x)*Q22x)/(Q11x/(2+rho1x)+Q21x/(2+rho2x))
+alphax.shape, nx.shape, dx.shape, sx.shape, Kx.shape, Lx.shape 
 
-C11 = (1+rho1x)/(2+rho1x)*(Q11x+Q12x/(1+r))
-C12 = (1+r)/(2+rho1x)*(Q11x+Q12x/(1+r))
-C21 = (1+rho2x)/(2+rho2x)*(Q21x+Q22x/(1+r))
-C22 = (1+r)/(2+rho2x)*(Q21x+Q22x/(1+r))
+g = (sx*(Kx**(alphax-1))*((Lx*nx)**(1-alphax)))-dx
+Y = (Kx**alphax)*(L**(1-alpha))
+Kss = ((sx/(nx+g+dx))**(1/(1-alphax)))
 
 
 # PLOT 1: VARIATION OF ENDOWMENT of Agent Type 1 in period 1
 
 
-r_1 = r[:,0,0,0,0,0]
-C11_1 = C11[:,0,0,0,0,0]
-C12_1 = C12[:,0,0,0,0,0]
-C21_1 = C21[:,0,0,0,0,0]
-C22_1 = C22[:,0,0,0,0,0]
+g_1 = g[:,0,0,0,0,0]
+Y_1 = Y[:,0,0,0,0,0]
+Kss_1 = Kss[:,0,0,0,0,0]
+
 
 fig1 = plt.figure(); ax1=fig1.add_subplot(1,1,1)
-ax1.plot(Q11,r_1,'k-',color='r',label='Interest rate')
+ax1.plot(Kss_1,alpha,'k-',color='r',label='alpha')
+ax1.plot(Kss_1,g_1,'k-',color='b',label='Kss')
 ax1.legend(loc='best')
-ax1.set_xlabel('Endowment $Q_{1}^{1}$')
-ax1.set_ylabel('Real interest rate')
+ax1.set_xlabel('Y')
+ax1.set_ylabel('$\gamma$')
 #fig1.savefig('C:/aaaCourses/AdvMacro/aaaHomeworks/2017/Python/fig1_r_Q11.png')   # save the figure to file
 
 fig2 = plt.figure(); ax1=fig2.add_subplot(1,1,1)
