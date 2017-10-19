@@ -49,7 +49,7 @@ ax1.plot(Q11,P_1,'k-',color='r',label='Price in state 2')
 ax1.legend(loc='best')
 ax1.set_xlabel('Endowment $Q_{1}^{1}$')
 ax1.set_ylabel('$P_{2}$')
-fig1.savefig('C:/aaaCourses/AdvMacro/aaaHomeworks/2017/Python/ex2_fig1_P_Q11.png')   # save the figure to file
+#fig1.savefig('C:/aaaCourses/AdvMacro/aaaHomeworks/2017/Python/ex2_fig1_P_Q11.png')   # save the figure to file
 
 
             
@@ -61,7 +61,7 @@ ax1.plot(Q11,C22_1,'k--',color='b',label='$C_{2}^{2}$')
 ax1.legend(loc='best')
 ax1.set_xlabel('Endowment $Q_{1}^{1}$')
 ax1.set_ylabel('Consumption ')
-fig2.savefig('C:/aaaCourses/AdvMacro/aaaHomeworks/2017/Python/ex2_fig2_C_Q11.png')   # save the figure to file
+#fig2.savefig('C:/aaaCourses/AdvMacro/aaaHomeworks/2017/Python/ex2_fig2_C_Q11.png')   # save the figure to file
 
 # PLOT 2: VARIATION OF ENDOWMENT of Agent Type 1 in state 2
 
@@ -76,7 +76,7 @@ ax1.plot(Q12,P_2,'k-',color='r',label='Price in state 2')
 ax1.legend(loc='best')
 ax1.set_xlabel('Endowment $Q_{2}^{1}$')
 ax1.set_ylabel('$P_{2}$')
-fig3.savefig('C:/aaaCourses/AdvMacro/aaaHomeworks/2017/Python/ex2_fig3_P_Q12.png')   # save the figure to file
+#fig3.savefig('C:/aaaCourses/AdvMacro/aaaHomeworks/2017/Python/ex2_fig3_P_Q12.png')   # save the figure to file
 
 fig4 = plt.figure(); ax1=fig4.add_subplot(1,1,1)
 ax1.plot(Q12,C11_2,'k-',color='r',label='$C_{1}^{1}$')
@@ -86,7 +86,7 @@ ax1.plot(Q12,C22_2,'k--',color='b',label='$C_{2}^{2}$')
 ax1.legend(loc='best')
 ax1.set_xlabel('Endowment $Q_{2}^{1}$')
 ax1.set_ylabel('Consumption ')
-fig4.savefig('C:/aaaCourses/AdvMacro/aaaHomeworks/2017/Python/ex2_fig4_C_Q12.png')   # save the figure to file
+#fig4.savefig('C:/aaaCourses/AdvMacro/aaaHomeworks/2017/Python/ex2_fig4_C_Q12.png')   # save the figure to file
 
 # PLOT 3: VARIATION OF SHARE of Agent Type 1 ASSUMING TYPE 2 AGENT HAS HIGH ENDOWMENT IN STATE 1
 
@@ -101,7 +101,7 @@ ax1.plot(alpha,P_3,'k-',color='r',label='Price in state 2')
 ax1.legend(loc='best')
 ax1.set_xlabel(r'Share of type-1 agents $\alpha^{1}$')
 ax1.set_ylabel('$P_{2}$')
-fig5.savefig('C:/aaaCourses/AdvMacro/aaaHomeworks/2017/Python/ex2_fig5_P_alpha1.png')   # save the figure to file
+#fig5.savefig('C:/aaaCourses/AdvMacro/aaaHomeworks/2017/Python/ex2_fig5_P_alpha1.png')   # save the figure to file
 
 fig6 = plt.figure(); ax1=fig6.add_subplot(1,1,1)
 ax1.plot(alpha,C11_3,'k-',color='r',label='$C_{1}^{1}$')
@@ -111,7 +111,7 @@ ax1.plot(alpha,C22_3,'k--',color='b',label='$C_{2}^{2}$')
 ax1.legend(loc='best')
 ax1.set_xlabel(r'Share of type-1 agents $\alpha^{1}$')
 ax1.set_ylabel('Consumption ')
-fig6.savefig('C:/aaaCourses/AdvMacro/aaaHomeworks/2017/Python/ex2_fig6_C_alpha1.png')   # save the figure to file
+#fig6.savefig('C:/aaaCourses/AdvMacro/aaaHomeworks/2017/Python/ex2_fig6_C_alpha1.png')   # save the figure to file
 
 # PLOT 4: VARIATION OF PROBABILITY OF STATE 1 ASSUMING TYPE 2 AGENT HAS HIGH ENDOWMENT IN STATE 1
 
@@ -126,7 +126,7 @@ ax1.plot(pi,P_4,'k-',color='r',label='Price in state 2')
 ax1.legend(loc='best')
 ax1.set_xlabel(r'Probability of state 1 $\pi_{1}$')
 ax1.set_ylabel('$P_{2}$')
-fig7.savefig('C:/aaaCourses/AdvMacro/aaaHomeworks/2017/Python/ex2_fig7_P_pi1.png')   # save the figure to file
+#fig7.savefig('C:/aaaCourses/AdvMacro/aaaHomeworks/2017/Python/ex2_fig7_P_pi1.png')   # save the figure to file
 
 fig8 = plt.figure(); ax1=fig8.add_subplot(1,1,1)
 ax1.plot(pi,C11_4,'k-',color='r',label='$C_{1}^{1}$')
@@ -136,4 +136,4 @@ ax1.plot(pi,C22_4,'k--',color='b',label='$C_{2}^{2}$')
 ax1.legend(loc='best')
 ax1.set_xlabel(r'Probability of state 1 $\pi_{1}$')
 ax1.set_ylabel('Consumption ')
-fig8.savefig('C:/aaaCourses/AdvMacro/aaaHomeworks/2017/Python/ex2_fig8_C_pi1.png')   # save the figure to file
+#fig8.savefig('C:/aaaCourses/AdvMacro/aaaHomeworks/2017/Python/ex2_fig8_C_pi1.png')   # save the figure to file
