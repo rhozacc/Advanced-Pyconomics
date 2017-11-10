@@ -1,0 +1,20 @@
+import numpy as np
+import matplotlib as plt
+
+#Parameters
+alpha = np.arange(0.20,0.80,0.1)      #Production function parameter
+s_k = np.arange(0.20,0.80,0.1)        #Savings function for K
+delta = np.arange(0.20,0.80,0.1)      #Law of motion for K par 
+gamma_l = np.arange(0.20,0.80,0.1)    #Law of motion for Labor par
+gamma_a = np.arange(0.20,0.80,0.1)    #Law of motion for Technological ix par
+
+#alphax,s_kx,s_hx, deltax,gamma_lx,gamma_ax = np.ix_(alpha,s_k,s_h,delta,gamma_l,gamma_a)
+#alphax.shape, s_kx.shape, s_hx.shape, deltax.shape, gamma_lx.shape, gamma_ax.shape
+alphax,s_kx,deltax,gamma_lx,gamma_ax = np.ix_(alpha,s_k,delta,gamma_l,gamma_a)
+alphax.shape, s_kx.shape, deltax.shape, gamma_lx.shape, gamma_ax.shape
+
+k_al = ((s_kx+(1-s_kx))/(gamma_ax + gamma_lx+deltax))**(1/(1-alphax))
+q_al = k_al**alphax
+i_al = (deltax+gamma_lx+gamma_ax)* k_al
+c_al = q_al - i_al
+
