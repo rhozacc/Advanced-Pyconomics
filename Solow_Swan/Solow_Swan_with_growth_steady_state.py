@@ -9,7 +9,7 @@ import matplotlib.pyplot as plt
 
 # KEY PARAMETERS
     # PRODUCTION FUNCTION PARAMETER FOR COBB-DOUGLAS P.F. with C.R.S.: Y_{t}=K_{t}^alpha * (A_{t}*L_{t}) ^(1-alpha)    
-alpha = np.arange(0.15,0.75,0.05) 
+alpha = np.arange(0.15,0.75,0.01) 
     
     # SAVINGS FUNCTION: S_{t} = s Y_{t} 
 s = np.arange(0.15,0.95,0.05) 
@@ -43,8 +43,7 @@ k_al_1 = k_al[:,0,0,0,0]
 q_al_1 = q_al[:,0,0,0,0]
 i_al_1 = i_al[:,0,0,0,0]
 c_al_1 = c_al[:,0,0,0,0]
-
-            
+        
 fig1 = plt.figure(); ax1=fig1.add_subplot(1,1,1)
 ax1.plot(alpha,k_al_1,'k-',color='red',label=r'$\tilde{k}^{\ast}$')
 ax1.plot(alpha,q_al_1,'k--',color='b',label=r'$\tilde{q}^{\ast}$')
