@@ -37,7 +37,7 @@ ax1.set_xlabel(r'Savings rate $sk$')
 ax1.set_ylabel(r'Variables per effective labor $\tilde{k}^{\ast}$')
 #
 #for i in range (0,8):
-#    q_al_2 = [6,i,(8-i),0,0,0,6]
+#    q_al_2 = q_al[6,i,(8-i),0,0,0,6]
 #
 #fig1 = plt.figure(); ax1=fig1.add_subplot(1,1,1)
 #ax1.plot(sk,q_al_2,'k-',color='red',label=r'$\tilde{k}^{\ast}$')
@@ -46,5 +46,5 @@ ax1.set_ylabel(r'Variables per effective labor $\tilde{k}^{\ast}$')
 ##ax1.legend(loc='best')
 ##ax1.set_xlabel(r'Savings rate $sk$')
 #ax1.set_ylabel(r'Variables per effective labor $\tilde{k}^{\ast}$')
-#
-#    
+
+    
