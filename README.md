@@ -1,9 +1,13 @@
 # Advanced Pyconomics
-### General Equilibrium models 
+### General Equilibrium models:
 Dynamic GE, Dynamic Stohastic GE
 
-### Growth Economics models
+
+### Growth Economics models:
 Solow-Swan Model, AK Model
 
-### And
-Other random projects related to econ/finance.
+
+### Other Random Projects
+Other random projects related to econ/finance
+
+*Random projects are unrelated to Advanced Macroeconomics course*
