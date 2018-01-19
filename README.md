@@ -1,4 +1,4 @@
-# Advanced-Pyconomics
+# Advanced Pyconomics
 ### General Equilibrium models 
 Dynamic GE, Dynamic Stohastic GE
 
