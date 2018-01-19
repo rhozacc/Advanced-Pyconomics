@@ -1,2 +1,4 @@
 # Advanced-Pyconomics
-General Equilibrium Models, Dynamic GE Models, Dynamic Stohastic GEs, ...
+General Equilibrium models, DGE, DSGE...;
+Growth Economics models, Solow-Swan, AK...;
+Other random projects related to econ/finance.
