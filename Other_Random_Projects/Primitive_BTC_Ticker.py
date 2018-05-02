@@ -3,8 +3,6 @@ import numpy as np
 from colorama import Fore
 import time
 
-i=1
-
 def getBitcoinPriceStr(currency):
         URL = 'https://api.coinbase.com/v2/prices/BTC-%s/spot' % currency
         try:
